@@ -66,6 +66,4 @@ platforms:
 
 suites:
   - name: default
-    run_list:
-      - ["recipe[chef-cygwin:default]"]
     attributes:
