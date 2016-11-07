@@ -18,7 +18,8 @@ action :install do
   execute "install Cygwin package: #{new_resource.name}" do
     cwd node['cygwin']['download_path']
     command "setup.exe -q -O -R #{node['cygwin']['home']} -s #{node['cygwin']['site']} #{proxy_command} -P #{new_resource.name}"
-    not_if "#{node['cygwin']['home']}/bin/cygcheck -c #{new_resource.name}".include? "OK"
+    check_cmd = "#{node['cygwin']['home']}/bin/cygcheck -c #{new_resource.name}"
+    not_if { shell_out(check_cmd).stdout.include? "OK" }
   end
 
   new_resource.updated_by_last_action(true)
@@ -28,7 +29,8 @@ action :uninstall do
   execute "remove Cygwin package: #{new_resource.name}" do
     cwd node['cygwin']['download_path']
     command "setup.exe -q -O -R #{node['cygwin']['home']} -s #{node['cygwin']['site']} #{proxy_command} -x #{new_resource.name}"
-    only_if "#{node['cygwin']['home']}/bin/cygcheck -c #{new_resource.name}".include? "OK"
+    check_cmd = "#{node['cygwin']['home']}/bin/cygcheck -c #{new_resource.name}"
+    only_if { shell_out(check_cmd).stdout.include? "OK" }
   end
 
   new_resource.updated_by_last_action(true)
