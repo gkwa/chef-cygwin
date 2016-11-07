@@ -3,7 +3,7 @@
 # For more information on the Policyfile feature, visit
 # https://github.com/chef/chef-dk/blob/master/POLICYFILE_README.md
 
-name "cygwin"
+name "taylordesktop"
 default_source :supermarket
 run_list "cygwin::default"
 
