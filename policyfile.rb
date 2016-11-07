@@ -14,4 +14,6 @@ chere cmake cmakedoc ctags cygutilsextra cyrussasl ddir dos2unix emacs
 email exim gccg++ gettext gettextdevel m4 mosh mysql nc ncurses
 openssldevel par2 patchutils perl_pods procps pythonsetuptools
 rdiffbackup scons sqlite3 squid squid stow stow subversion
-the_silver_searcher tmux tree vim xmlstarlet }
+the_silver_searcher tmux tree vim xmlstarlet libcurl-devel
+libexpat-devel libgcrypt-devel libgmp3 libiconv libiconv-devel libtool
+libuuid-devel}
