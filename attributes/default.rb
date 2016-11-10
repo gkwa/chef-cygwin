@@ -14,8 +14,8 @@
 
 default['cygwin']['download_path'] = Chef::Config['file_cache_path']
 default['cygwin']['home'] = "C:/cygwin"
-default['cygwin']['sites'] = %w(http://cygwin.osuosl.org/
-                                http://mirrors.sonic.net/cygwin/
+default['cygwin']['sites'] = %w(http://mirrors.sonic.net/cygwin/
                                 http://mirrors.kernel.org/sourceware/cygwin/
-                                http://mirror.nexcess.net/cygwin/)
+                                http://mirror.nexcess.net/cygwin/
+                                http://cygwin.osuosl.org/)
 default['cygwin']['packages'] = []
