@@ -53,6 +53,33 @@ platforms:
     vm_hostname: false
   transport:
     name: winrm
+- name: eval-win2012r2-standard-nocm-1.0.4
+  os_type: windows
+  driver_config:
+    box: eval-win2012r2-standard-nocm-1.0.4
+    gui: false #headless
+    communicator: winrm
+    vm_hostname: false
+  transport:
+    name: winrm
+- name: eval-win2008r2-datacenter-nocm-1.0.4
+  os_type: windows
+  driver_config:
+    box: eval-win2008r2-datacenter-nocm-1.0.4
+    gui: false #headless
+    communicator: winrm
+    vm_hostname: false
+  transport:
+    name: winrm
+- name: eval-win2008r2-standard-nocm-1.0.4
+  os_type: windows
+  driver_config:
+    box: eval-win2008r2-standard-nocm-1.0.4
+    gui: false #headless
+    communicator: winrm
+    vm_hostname: false
+  transport:
+    name: winrm
 - name: mwrock/Windows2016
   os_type: windows
   driver_config:
